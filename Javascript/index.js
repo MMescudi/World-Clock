@@ -19,6 +19,25 @@ function updateTime() {
   parisTimeElement.innerHTML = parisTime.format(
     "hh:mm:ss [<small>]A[</small>]"
   );
+  //Singapore
+  let singaporeElement = document.querySelector("#singapore");
+  let singaporeDateElement = singaporeElement.querySelector(".date");
+  let singaporeTimeElement = singaporeElement.querySelector(".time");
+  let singaporeTime = moment().tz("Asia/Singapore");
+
+  singaporeDateElement.innerHTML = singaporeTime.format("MMMM Do YYYY");
+  singaporeTimeElement.innerHTML = singaporeTime.format(
+    "hh:mm:ss [<small>]A[</small>]"
+  );
+
+  //Lima
+  let limaElement = document.querySelector("#lima");
+  let limaDateElement = limaElement.querySelector(".date");
+  let limaTimeElement = limaElement.querySelector(".time");
+  let limaTime = moment().tz("America/lima");
+
+  limaDateElement.innerHTML = limaTime.format("MMMM Do YYYY");
+  limaTimeElement.innerHTML = limaTime.format("hh:mm:ss [<small>]A[</small>]");
 }
 
 updateTime();
@@ -43,6 +62,9 @@ function updateCity(event) {
         )}<small>${cityTime.format("A")}</small></div>
         </div>
   `;
+  setTimeout(() => {
+    updateCity(event);
+  }, 1000);
 }
 
 let citiesSelectElement = document.querySelector("#city");

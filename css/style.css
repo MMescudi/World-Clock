@@ -12,6 +12,16 @@ body {
   padding: 60px;
 }
 
+.world-link {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 36px;
+}
 .city {
   display: flex;
   justify-content: space-between;
@@ -48,11 +58,6 @@ select {
   padding: 10px;
 }
 
-h1 {
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 36px;
-}
 footer {
   text-align: center;
   font-size: 18px;
